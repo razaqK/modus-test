@@ -1,0 +1,19 @@
+version: '3'
+services:
+  modus:
+    build: .
+    container_name: modus
+    networks:
+      - servers_external_network
+    ports:
+      - 8888:8888
+    env_file:
+      - ./.env
+    tty: true
+    volumes:
+      - .:/src
+      - .:/usr/src/app
+      - ./bin/log/modus:/var/log/application/modus
+networks:
+  servers_external_network:
+    external: true

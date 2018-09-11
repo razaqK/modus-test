@@ -1,0 +1,25 @@
+{
+  "name": "modus",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docker-start": "pm2 kill && pm2-docker start pm2.yaml",
+    "start": "pm2 kill && pm2 start pm2.yaml",
+    "test": "NODE_PATH=. NODE_ENV=test mocha"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "2.8.4",
+    "dotenv": "4.0.0",
+    "express": "4.16.3",
+    "npm": "6.4.1",
+    "sprintf-js": "1.1.1",
+    "supertest": "^3.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}

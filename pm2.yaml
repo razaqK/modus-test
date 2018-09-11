@@ -1,0 +1,8 @@
+apps:
+  - script   : app.js
+    instances: 1
+    exec_mode: cluster
+    watch  : false
+    ignore_watch: .
+    env    :
+      NODE_PATH: .
